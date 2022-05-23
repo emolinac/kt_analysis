@@ -1,0 +1,42 @@
+\documentclass[8pt]{article}
+\usepackage{anysize}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{physics}
+
+\begin{document}
+The equation used to calculate the average transverse momentum on a certain $(Q^2,x,z_h)$ bin is:
+\begin{equation}
+\langle P^2_T\rangle = \frac{\int dP^2_T \frac{d\sigma}{dQ^2dxdzdP^2_T} P^2_T}{\int dP^2_T \frac{d\sigma}{dQ^2dxdzdP^2_T}}
+\end{equation}
+
+Then, using SIDISs four-fold differential cross-section (Boglione,2011,eqs.17-18) we obtain:
+\begin{equation}
+\langle P^2_T\rangle = \frac{\sum_q e^2_q f_q(x)D_{h/q}(z) \int dP^2_Tdk^2_{\perp}d\theta f'(k_{\perp})\times D'(p_{\perp})P^2_T}{\sum_q e^2_q f_q(x)D_{h/q}(z) \int dP^2_Tdk^2_{\perp}d\theta f'(k_{\perp})\times D'(p_{\perp})}
+\end{equation}
+Where $\theta$ is the angle formed between $\textbf{k}_{\perp}$ and $\textbf{P}_T$ considering that they both inhabit a x-y hyperplane with the same orientation.The primed functions are the transverse momentum dependent parts of partonic and hadronic distributions. In this case we took the usual gaussian approach to represent them with the consideration that the integration of the intrinsic transverse momentum wont be up to infinity. Instead, it will be up to $k^2_{\perp_{MAX}}$:
+\begin{equation}
+f'(k_{\perp})=\frac{e^{-k^2_{\perp}/\langle k^2_{\perp}\rangle}}{\pi\langle k^2_{\perp}\rangle}\frac{1}{1-e^{-k^2_{\perp_{MAX}}/\langle k^2_{\perp}\rangle}} \quad D'(p_{\perp})=\frac{e^{-p^2_{\perp}/\langle p^2_{\perp}\rangle}}{\pi\langle p^2_{\perp}\rangle}
+\end{equation}
+If we consider that the transverse momentum quantities are flavour independent then the integrals are fully detached from the flavour sum. Thus, the equation is simplified:
+\begin{equation}
+\langle P^2_T\rangle = \frac{\int dP^2_Tdk^2_{\perp}d\theta f'(k_{\perp})\times D'(p_{\perp})P^2_T}{\int dP^2_Tdk^2_{\perp}d\theta f'(k_{\perp})\times D'(p_{\perp})}
+\end{equation}
+Considering the gaussian representation of transverse momentum dependent quantities we can write the previous equation as:
+\begin{equation}
+\langle P^2_T\rangle = \frac{\int dP^2_Tdk^2_{\perp}d\theta e^{a+b+c}P^2_T}{\int dP^2_Tdk^2_{\perp}d\theta e^{a+b+c}}
+\end{equation}
+Where:
+\begin{itemize}
+\item $a=\frac{-P^2_T}{\langle p^2_{\perp}\rangle}$
+\item $b=\frac{2zP_Tk_{\perp}cos(\theta)}{\langle p^2_{\perp}\rangle}$
+\item $c=\frac{-k^2_{\perp}(\langle p^2_{\perp}\rangle + z^2\langle k^2_{\perp}\rangle)}{\langle k^2_{\perp}\rangle\langle p^2_{\perp}\rangle}$
+\end{itemize}
+The limits of the integration are delimited as follow:
+\begin{itemize}
+\item $0<k^2_{\perp}<k^2_{\perp_{MAX}}$
+\item $0<P^2_T<P^2_{T_{MAX}}$ where $P^2_{T_{MAX}}$ is given by the data
+\item $0<\theta<2\pi$
+\end{itemize}
+\end{document}
